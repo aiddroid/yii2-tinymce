@@ -3,7 +3,10 @@
     "description": "A Yii2 widget for TinyMce4.2.1 (Integrate with elfinder2.0 file manager)",
     "type": "yii2-extension",
     "require": {
-        "php": ">=5.4.0"
+        "mihaildev/yii2-elfinder": "~1.0"
+    },
+    "require-dev": {
+        "mihaildev/yii2-elfinder": "~1.0"
     },
     "license": "BSD-3-Clause",
     "authors": [
