@@ -74,8 +74,15 @@ class Widget extends \yii\base\Widget
 
         // Insert plugins in options
         if (isset($this->options['plugins'])) {
-            foreach ($this->options['plugins'] as $plugin) {
-                $this->registerPlugin($plugin);
+            foreach ($this->options['plugins'] as $pluginLine) {
+                foreach(explode(' ', $pluginLine) as $plugin){
+                    //if load elfinder plugin ,load elfinder asserts first
+                    if($plugin == 'elfinder'){
+                        \mihaildev\elfinder\Assets::register($this->getView());
+                        \mihaildev\elfinder\Assets::addLangFile($this->options['language'],$this->getView());
+                    }
+                    $this->registerPlugin($plugin);
+                }
             }
         }
 
@@ -90,11 +97,7 @@ class Widget extends \yii\base\Widget
      */
     protected function registerPlugin($name)
     {
-        $asset = "TinyMcePluginAsset";
-        // check exists file before register (it may be custom plugin with not standard file placement)
-        $sourcePath = Yii::$app->vendorPath . '/aiddroid/yii2-tinymce/' . $asset . '.php';
-        if (is_file($sourcePath)) {
-            $asset::register($this->getView())->js = 'plugins/'.$name.'/plugin.min.js';
-        }
+        //register plugin
+        TinyMcePluginAsset::register($this->getView())->js[] = 'plugins/'.$name.'/plugin.min.js';
     }
 }

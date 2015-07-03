@@ -18,16 +18,6 @@ class TinyMcePluginAsset extends AssetBundle
     public $css = [
     ];
     public $depends = [
-        'yii\web\JqueryAsset'
+        //'yii\web\JqueryAsset'
     ];
-
-    public function init() {
-
-        $appLanguage = strtolower(substr(Yii::$app->language , 0, 2)); //First 2 letters
-
-        if($appLanguage != 'en')
-            $this->js[] = 'langs/' . $appLanguage . '.js';
-
-        parent::init();
-    }
 }

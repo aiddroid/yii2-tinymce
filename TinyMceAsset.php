@@ -20,7 +20,7 @@ class TinyMceAsset extends AssetBundle
     public $css = [
     ];
     public $depends = [
-        'yii\web\JqueryAsset'
+        //'yii\web\JqueryAsset'
     ];
     
     public function registerAssetFiles($view) {
@@ -28,7 +28,7 @@ class TinyMceAsset extends AssetBundle
         $language = $this->language ? $this->language : $appLanguage;
         
         if($language != 'en')
-            $this->js[] = 'lang/' . $language . '.js';
+            $this->js[] = 'langs/' . $language . '.js';
         
         parent::registerAssetFiles($view);
     }
