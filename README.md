@@ -24,3 +24,6 @@ A Yii2 widget for TinyMce4.2.1 (Integrate with elfinder2.0 file manager)
         ]
     )
 ```
+
+## screenshot
+ ![image](https://raw.githubusercontent.com/aiddroid/yii2-tinymce/master/screenshot.jpg)
