@@ -1,0 +1,21 @@
+{
+    "name": "aiddroid/yii2-tinymce",
+    "description": "A Yii2 widget for TinyMce4.2.1 (Integrate with elfinder2.0 file manager)",
+    "type": "yii2-extension",
+    "require": {
+        "mihaildev/yii2-elfinder": "~1.0"
+    },
+    "require-dev": {
+        "mihaildev/yii2-elfinder": "~1.0"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "aiddroid",
+            "email": "aiddroid@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"aiddroid\\yii2tinymce\\": ""}
+    }
+}
