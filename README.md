@@ -4,7 +4,7 @@ A Yii2 widget for TinyMce4.2.1 (Integrate with elfinder2.0 file manager)
 - mihaildev/elfinder (for efinder2.0)(https://github.com/MihailDev/yii2-elfinder)
 
 ## usage in views
-```
+```php
     echo $form->field($model, 'body')->widget(
         \aiddroid\yii2tinymce\Widget::className(),
         [
